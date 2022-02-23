@@ -1,7 +1,7 @@
 import random 
 
 class Insect:
-    def __init__(self):
+    def __init__(self,wings,legs,flight):
         self.wings = 4
         self.legs = 3
         self.flight = 0

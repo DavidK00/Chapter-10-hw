@@ -1,13 +1,13 @@
 from unittest import mock
 import InsectClass as i
 
-mostquito = i.Insect()
-housefly = i.Insect()
+mosquito = i.Insect(2,4,9)
+housefly = i.Insect(3,6,8)
 
-mostquito.flight_length()
+mosquito.flight_length()
 housefly.flight_length()
 
-print('This insect will fly', mostquito.get_fly()) 
+print('This insect will fly', mosquito.get_fly()) 
 print('This insect will fly', housefly.get_fly()) 
 
 

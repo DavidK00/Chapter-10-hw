@@ -25,4 +25,7 @@ class cellphone:
         
     def get_price(self):
         return self.__price
+    
+    def __str__(self):
+        return "The model is: : " + self.__model
         
