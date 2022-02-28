@@ -38,18 +38,19 @@ patient_id_3 = 2
 
 ct_scan = pr.procedure(name_3, date_3, prac_3, charge_3, patient_id_3)
 
+#input a patient ID to generate a corresponding bill
+pat_id = input('Which patient ID would you like to bill? ')
 
 procedure_list = [physical, MRI, ct_scan]
 patient_procedure_list = []
-
-pat_id = input('Which patient ID would you like to bill? ')
-
-for procedure in procedure_list:
-    if procedure.get_id() == int(pat_id):
-        patient_procedure_list.append(procedure)
         
 
 def patient_billing(patient_obj, procedure_obj):
+
+     for procedure in procedure_list:
+        if procedure.get_id() == int(pat_id):
+            patient_procedure_list.append(procedure)
+
      total = 0 
      print('***Patient Bill***')
      print('Name:', patient_obj.get_name())
@@ -71,9 +72,6 @@ def patient_billing(patient_obj, procedure_obj):
          print('Total Charges: ' + "${:,.2f}".format(total))
 
     
-
-
-
 
 patient_billing(patient_1, patient_procedure_list)
 
